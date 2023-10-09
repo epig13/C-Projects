@@ -1,0 +1,145 @@
+
+
+Epifanio Gonzalez
+3/15/22
+Chap. 4 8-9
+
+
+
+
+Q.7
+
+
+using System;
+
+namespace chap4
+{
+    class GuessingGame
+    {
+        static void Main(string[] args)
+        {
+            Random ranNumberGenerator = new Random();
+            int randomNumber;
+            randomNumber = ranNumberGenerator.Next(1, 10);
+
+            Console.Write("Enter the guess number : ");
+            
+            int guessNumber = int.Parse(Console.ReadLine());
+            
+            Console.WriteLine("Random number : " + randomNumber);
+            
+            if (randomNumber > guessNumber)
+            {
+                
+                Console.WriteLine("too low");
+            }
+            else if (randomNumber < guessNumber)
+            {
+                
+                Console.WriteLine("too high");
+            }
+            else if (randomNumber == guessNumber)
+            {
+                
+                Console.WriteLine("correct");
+            }
+
+
+
+            {
+                Console.ReadLine();
+            }
+        }
+    }
+}
+
+
+====================================================================
+Q. 8
+using System;
+
+namespace chap4
+{
+    class RockPaperScissors
+    {
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("Choose rock,paper, or scissors");
+            string userChoice = Console.ReadLine();
+
+            Random r = new Random();
+            int computerChoice = r.Next(4);
+
+
+            if (computerChoice == 1)
+            {
+                if (userChoice == "rock")
+                {
+                    Console.WriteLine("Com picked Rock");
+                    Console.WriteLine("Its a Tie");
+                }
+                else if (userChoice == "paper")
+                {
+                    Console.WriteLine("Com picked scissors");
+                    Console.WriteLine("You lose");
+                }
+                else if (userChoice == "scissors")
+                {
+                    Console.WriteLine("Com picked Rock");
+                    Console.WriteLine("you win!");
+                }
+                else
+                {
+                    Console.Write("You didnt pick rock, paper, or scissors");
+                }
+            }
+            if (computerChoice == 2)
+            {
+                if (userChoice == "paper")
+                {
+                    Console.WriteLine("Com picked paper");
+                    Console.WriteLine("Its a Tie");
+                }
+                else if (userChoice == "rock")
+                {
+                    Console.WriteLine("com picked rock");
+                    Console.WriteLine("You win!");
+                }
+                else if (userChoice == "scissors")
+                {
+                    Console.WriteLine("com picked scissors");
+                    Console.WriteLine("You Lose!");
+                }
+                else
+                {
+                    Console.Write("You didnt pick rock, paper, or scissors");
+                }
+                if (computerChoice == 3)
+                {
+                    if (userChoice == "scissors")
+                    {
+                        Console.WriteLine("Com picked Scissors");
+                        Console.WriteLine("Its a Tie");
+                    }
+                    else if (userChoice == "Rock")
+                    {
+                        Console.WriteLine("Com picked rock");
+                        Console.WriteLine("You lose");
+                    }
+                    else if (userChoice == "paper")
+                    {
+                        Console.WriteLine("Com picked paper");
+                        Console.WriteLine("You win");
+                    }
+                    else
+                    {
+                        Console.Write("You didnt pick rock, paper, or scissors");
+                    }
+
+                    Console.ReadLine();
+                }
+            }
+        }
+    }
+}
